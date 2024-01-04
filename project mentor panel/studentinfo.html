@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Information</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="main_container_info">
+        <h1>Student Information</h1>
+        <div class="section1">
+            <form>
+                <h3>Student Form</h3>
+                <div>
+                    <label for="Username">Full Name</label>
+                    <input type="text" name="Username" id="Username" placeholder="Enter the Username" required>
+                </div>
+                <div>
+                    <label for="Email">Email</label>
+                    <input type="text" name="Email" id="Email" placeholder="Enter the Email">
+                </div>
+                <div>
+                    <label for="MobileNo">Mobile No.</label>
+                    <input type="text" name="MobileNo" id="MobileNo" placeholder="Enter the Mobile No.">
+                </div>
+                <div>
+                    <label for="Age">Age</label>
+                    <input type="text" name="Age" id="Age" placeholder="Enter the age">
+                </div>
+                <div>
+                    <label for="RollNo">Roll No.</label>
+                    <input type="text" name="RollNo" id="RollNo" placeholder="Enter Roll No.">
+                </div>
+                <div>
+                    <label for="stdclass">Student class</label>
+                    <input type="text" name="stdclass" id="stdclass" placeholder="Enter the Student class">
+                </div>
+                <div>
+                    <button class="btn" type="button" onclick="handleSubmit()">Submit</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="section2" style="margin-top: 20px;">
+            <table>
+                <thead>
+                    <tr style="display: flex; flex-direction: row; justify-content: space-evenly; width: 100vw;">
+                        <th>Full Name</th>
+                        <th>Email</th>
+                        <th>Mobile No</th>
+                        <th>Age</th>
+                        <th>Roll No</th>
+                        <th>Student class</th>
+                    </tr>
+                </thead>
+                <tbody id="studentTableBody">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        function handleSubmit() {
+            const name = document.getElementById('Username').value;
+            const Email = document.getElementById('Email').value;
+            const mobileNo = document.getElementById('MobileNo').value;
+            const Age = document.getElementById('Age').value;
+            const RollNo = document.getElementById('RollNo').value;
+            const stdclass = document.getElementById('stdclass').value;
+
+            // Add the form data to the table dynamically
+            const tableBody = document.getElementById('studentTableBody');
+            const newRow = tableBody.insertRow(tableBody.rows.length);
+            const cell1 = newRow.insertCell(0);
+            const cell2 = newRow.insertCell(1);
+            const cell3 = newRow.insertCell(2);
+            const cell4 = newRow.insertCell(3);
+            const cell5 = newRow.insertCell(4);
+            const cell6 = newRow.insertCell(5);
+
+            cell1.innerHTML = name;
+            cell2.innerHTML = Email;
+            cell3.innerHTML = mobileNo;
+            cell4.innerHTML = Age;
+            cell5.innerHTML = RollNo;
+            cell6.innerHTML = stdclass;
+        }
+    </script>
+</body>
+
+</html>

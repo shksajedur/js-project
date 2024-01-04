@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LMS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="centre">
+        <h1>Login</h1>
+        <div class="Login-form" style="text-align: center;">
+            <label>Username</label>
+
+            <input type="email" placeholder="Type your Username" id="Username">
+        </div>
+
+        <div class="Password-input">
+            <label>password</label>
+            <input type="password" placeholder="Type your password" id="password">
+        </div>
+        <!-- <p>Forget password</p> -->
+
+        <button class="Login-btn" onclick="handlelogin()">
+            Login
+        </button>
+        <!-- <div class="Alternative-signup">
+            <p>Not a member? <a href="#">Sign-up </a> </p>
+        </div> -->
+    </div>
+<!-- 
+    </div>
+    <div class="section">
+        <h3>Student information</h3>
+    </div> -->
+
+    <script>
+        function handlelogin() {
+            let email = document.getElementById("Username").value;
+            let password = document.getElementById("password").value;
+            if (email == "sajedur@gmail.com" && password == "12345") {
+                alert("sucessful !")
+                window.location.assign("index.html")
+            } else {
+                alert("wrong entry invalid")
+            }
+        }
+     
+
+
+
+
+    </script>
+
+</body>
+
+</html>

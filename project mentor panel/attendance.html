@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance</title>
+    <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+    <div class="main_container">
+        <div>
+<!--     
+          <div class="sidenav">
+            <a href="#">Student Information</a>
+            <a href="#">Attendance</a>
+            <a href="#">Performance</a>
+          </div> -->
+    
+    
+        </div>
+        <div class="Attendance_container">
+            <header>
+                <h1>Attendance System</h1>
+            </header>
+            <section>
+                <div id="attendanceForm">
+                    <label for="studentName">Student Name:</label>
+                    <input type="text" id="studentName" name="studentName" required>
+        
+                    <label for="attendanceStatus">Attendance Status:</label>
+                    <select id="attendanceStatus" name="attendanceStatus" required>
+                        <option value="present">Present</option>
+                        <option value="absent">Absent</option>
+                    </select>
+        
+                    <button onclick="showInput()" type="submit">Submit Attendance</button>
+                </div>
+            </section>                
+
+        </div>
+        <div class="output" id="output"> 
+          <!-- <h4>Attendance</h4> -->
+        </div>
+    
+    
+      </div>
+      <script>
+        function showInput() {
+          // Get the input value
+          var inputValue = document.getElementById('studentName').value;
+        let selectedValue  = document.getElementById('attendanceStatus').value;
+        let output= document.getElementById("output")
+          let result= document.createElement("div")
+          result.innerText = ' ' + inputValue + ':' + selectedValue;
+          output.appendChild(result)
+        }
+
+
+      </script>
+      <link rel="stylesheet" href="script.js">
+</body>
+</html>
